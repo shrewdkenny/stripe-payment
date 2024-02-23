@@ -37,8 +37,8 @@ export default {
           quantity: 1,
         },
       ],
-      successURL: "http://localhost:5174/success",
-      cancelURL: "http://localhost:5174/cancel",
+      successURL: "http://localhost:5173/success",
+      cancelURL: "http://localhost:5173/cancel",
     };
   },
   methods: {
