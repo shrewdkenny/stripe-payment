@@ -34,23 +34,19 @@
         <p class="mt-5 font-light">Recently added shirts!</p>
       </div>
       <div class="mt-[100px] px-10 flex flex-wrap">
-        <div>
-          <div class="cards w-[250px] h-[300px] bg-cover"></div>
-          <h1 class="flex justify-center items-center text-sm font-bold mt-3">
-            Plain White Shirt
-          </h1>
-          <h2 class="flex justify-center items-center text-sm text-blue-600 mt-1">
-            $29.00
-          </h2>
-        </div>
+        <ProductCard />
       </div>
     </div>
   </main>
 </template>
 
 <script>
+import ProductCard from "../components/ProductCard.vue";
 export default {
   name: "Test",
+  components: {
+    ProductCard,
+  },
   created() {},
   data() {
     return {};
