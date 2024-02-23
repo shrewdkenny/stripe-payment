@@ -2,10 +2,10 @@
   <div>
     <div class="cards w-[250px] h-[300px] bg-cover"></div>
     <h1 class="flex justify-center items-center text-sm font-bold mt-3">
-      Plain White Shirt
+      {{ labelText }}
     </h1>
     <h2 class="flex justify-center items-center text-sm text-blue-600 mt-1">
-      $29.00
+      {{ price }}
     </h2>
   </div>
 </template>
@@ -17,9 +17,16 @@ export default {
   data() {
     return {};
   },
-  props: {},
+  props: {
+    labelText: String,
+    price: Number,
+  },
   methods: {},
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style>
+.cards {
+  background-image: url("@/assets/images/one.png");
+}
+</style>

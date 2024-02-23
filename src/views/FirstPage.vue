@@ -33,8 +33,8 @@
         <h1 class="text-3xl font-normal">Discover NEW Arrivals</h1>
         <p class="mt-5 font-light">Recently added shirts!</p>
       </div>
-      <div class="mt-[100px] px-10 flex flex-wrap">
-        <ProductCard />
+      <div class="mt-[100px] px-10 flex flex-wrap gap-3">
+        <ProductCard labelText="plain white shirt" price="$29.00" />
       </div>
     </div>
   </main>
@@ -60,7 +60,5 @@ export default {
 .first {
   background-image: url("@/assets/images/six.png");
 }
-.cards {
-  background-image: url("@/assets/images/one.png");
-}
+
 </style>
