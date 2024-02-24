@@ -1,10 +1,12 @@
 <template>
-  <div>
-    <div class="cards w-[250px] h-[300px] bg-cover"></div>
+  <div class="flex flex-col justify-center items-center text-center">
+    <img :src="pictures" alt="" />
     <h1 class="flex justify-center items-center text-sm font-bold mt-3">
       {{ labelText }}
     </h1>
-    <h2 class="flex justify-center items-center text-sm text-blue-600 mt-1">
+    <h2
+      class="flex justify-center items-center text-sm text-blue-600 mt-1 mb-12"
+    >
       {{ price }}
     </h2>
   </div>
@@ -19,14 +21,11 @@ export default {
   },
   props: {
     labelText: String,
-    price: Number,
+    price: String,
+    pictures: String,
   },
   methods: {},
 };
 </script>
 
-<style>
-.cards {
-  background-image: url("@/assets/images/one.png");
-}
-</style>
+<style></style>
