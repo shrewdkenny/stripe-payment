@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-[50px] flex flex-col justify-center items-center">
+  <div class="mt-[50px] flex flex-col justify-center items-center text-5xl">
     <h1>Stripe Payment</h1>
 
     <stripe-checkout

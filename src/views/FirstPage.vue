@@ -14,7 +14,7 @@
       </div>
     </nav>
     <section
-      class="first h-[90vh] w-full bg-cover bg-no-repeat flex flex-col justify-end items-end"
+      class="first py-[100px] bg-cover bg-no-repeat flex flex-col justify-end items-end"
     >
       <div class="w-[500px] mb-[300px]">
         <h1 class="text-white text-5xl font-mono font-semibold mb-[20px]">
@@ -33,21 +33,47 @@
         <h1 class="text-3xl font-normal">Discover NEW Arrivals</h1>
         <p class="mt-5 font-light">Recently added shirts!</p>
       </div>
-      <div
-        class="mt-[100px] w-[100vw] flex flex-wrap justify-between items-center px-[50px]"
-      >
+      <div class="mt-[100px] flex flex-wrap justify-between space-x-5 px-10">
         <ProductCard
           labelText="Plain white shirt"
           price="$29.00"
-         
+          pictures="./src/assets/images/one.png"
         />
-        <ProductCard labelText="Denim jacket" price="$69.00" />
-        <ProductCard labelText="Black polo shirt" price="$49.00" />
-        <ProductCard labelText="Blue Sweatshirt" price="$79.00" />
-        <ProductCard labelText="Blue Plain Shirt" price="$49.00" />
-        <ProductCard labelText="Dark Blue shirt" price="$89.00" />
-        <ProductCard labelText="Outcat T shirt" price="$19.00" />
-        <ProductCard labelText="Polo Plain Shirt" price="$29.00" />
+        <ProductCard
+          labelText="Denim jacket"
+          price="$69.00"
+          pictures="./src/assets/images/two.png"
+        />
+        <ProductCard
+          labelText="Black polo shirt"
+          price="$49.00"
+          pictures="./src/assets/images/three.png"
+        />
+        <ProductCard
+          labelText="Blue Sweatshirt"
+          price="$79.00"
+          pictures="./src/assets/images/four.png"
+        />
+        <ProductCard
+          labelText="Blue Plain Shirt"
+          price="$49.00"
+          pictures="./src/assets/images/one.png"
+        />
+        <ProductCard
+          labelText="Blue Plain Shirt"
+          price="$49.00"
+          pictures="./src/assets/images/two.png"
+        />
+        <ProductCard
+          labelText="Blue Plain Shirt"
+          price="$49.00"
+          pictures="./src/assets/images/three.png"
+        />
+        <ProductCard
+          labelText="Blue Plain Shirt"
+          price="$49.00"
+          pictures="./src/assets/images/four.png"
+        />
       </div>
     </div>
   </main>
