@@ -42,7 +42,7 @@
         <ProductCard
           labelText="Denim jacket"
           price="$69.00"
-          pictures="./src/assets/images/two.png"
+          pictures="./src/assets/images/thirteen.png"
         />
         <ProductCard
           labelText="Black polo shirt"
@@ -57,24 +57,27 @@
         <ProductCard
           labelText="Blue Plain Shirt"
           price="$49.00"
-          pictures="./src/assets/images/one.png"
-        />
-        <ProductCard
-          labelText="Blue Plain Shirt"
-          price="$49.00"
           pictures="./src/assets/images/two.png"
         />
         <ProductCard
           labelText="Blue Plain Shirt"
           price="$49.00"
-          pictures="./src/assets/images/three.png"
+          pictures="./src/assets/images/five.png"
         />
         <ProductCard
           labelText="Blue Plain Shirt"
           price="$49.00"
-          pictures="./src/assets/images/four.png"
+          pictures="./src/assets/images/seven.png"
+        />
+        <ProductCard
+          labelText="Blue Plain Shirt"
+          price="$49.00"
+          pictures="./src/assets/images/eight.png"
         />
       </div>
+      <div
+        class="mt-[100px] flex flex-wrap justify-between space-x-5 px-10"
+      ></div>
     </div>
   </main>
 </template>
