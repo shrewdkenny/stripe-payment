@@ -3,12 +3,12 @@
     <h1>Stripe Payment</h1>
 
     <stripe-checkout
-      ref= "checkoutRef"
-      mode= "payment"
-      :pk= "publishableKey"
-      :line-items= "lineItems"
-      :success-url= "successURL"
-      :cancel-url= "cancelURL"
+      ref="checkoutRef"
+      mode="payment"
+      :pk="publishableKey"
+      :line-items="lineItems"
+      :success-url="successURL"
+      :cancel-url="cancelURL"
     />
 
     <button
@@ -33,7 +33,15 @@ export default {
     return {
       lineItems: [
         {
-          price: "price_1OmefXAzNMyeQV4mFgevf557",
+          price: "price_1OolQBAzNMyeQV4mYJN40u8P",
+          quantity: 1,
+        },
+        {
+          price: "price_1OolQfAzNMyeQV4mAlNS5LEk",
+          quantity: 1,
+        },
+        {
+          price: "price_1OolOtAzNMyeQV4mj5Vfqwnf",
           quantity: 1,
         },
       ],

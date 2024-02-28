@@ -23,6 +23,7 @@ export default {
     labelText: String,
     price: String,
     pictures: String,
+    
   },
   methods: {},
 };
