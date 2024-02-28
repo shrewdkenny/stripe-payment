@@ -37,6 +37,7 @@
         class="mt-[100px] flex flex-wrap justify-between space-x-5 px-10 w-full"
       >
         <ProductCard
+        @click="pay"
           labelText="Plain white shirt"
           price="$29.00"
           pictures="./src/assets/images/one.png"
@@ -192,7 +193,11 @@ export default {
     return {};
   },
   props: {},
-  methods: {},
+  methods: {
+    pay() {
+      window.location.href = "https://buy.stripe.com/test_cN217G8Xhd9vfhCaEE";
+    },
+  },
 };
 </script>
 

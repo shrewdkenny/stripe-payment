@@ -33,7 +33,7 @@ export default {
     return {
       lineItems: [
         {
-          price: "price_1OolQBAzNMyeQV4mYJN40u8P",
+          price: "price_1OolQfAzNMyeQV4mAlNS5LEk",
           quantity: 1,
         },
         {
@@ -41,7 +41,7 @@ export default {
           quantity: 1,
         },
         {
-          price: "price_1OolOtAzNMyeQV4mj5Vfqwnf",
+          price: "price_1OolQfAzNMyeQV4mAlNS5LEk",
           quantity: 1,
         },
       ],
@@ -52,6 +52,7 @@ export default {
   methods: {
     submit() {
       this.$refs.checkoutRef.redirectToCheckout();
+      
     },
   },
 };
