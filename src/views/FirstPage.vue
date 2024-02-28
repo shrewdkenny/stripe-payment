@@ -33,7 +33,9 @@
         <h1 class="text-3xl font-normal">Discover NEW Arrivals</h1>
         <p class="mt-5 font-light">Recently added shirts!</p>
       </div>
-      <div class="mt-[100px] flex flex-wrap justify-between space-x-5 px-10">
+      <div
+        class="mt-[100px] flex flex-wrap justify-between space-x-5 px-10 w-full"
+      >
         <ProductCard
           labelText="Plain white shirt"
           price="$29.00"
@@ -60,30 +62,126 @@
           pictures="./src/assets/images/two.png"
         />
         <ProductCard
-          labelText="Blue Plain Shirt"
-          price="$49.00"
+          labelText="Dark Blue Shirt"
+          price="$89.00"
           pictures="./src/assets/images/five.png"
         />
         <ProductCard
-          labelText="Blue Plain Shirt"
-          price="$49.00"
+          labelText="Outcast T Shirt"
+          price="$19.00"
           pictures="./src/assets/images/seven.png"
         />
         <ProductCard
-          labelText="Blue Plain Shirt"
-          price="$49.00"
+          labelText="Polo Plain Shirt"
+          price="$29.00"
           pictures="./src/assets/images/eight.png"
         />
       </div>
       <div
-        class="mt-[100px] flex flex-wrap justify-between space-x-5 px-10"
-      ></div>
+        class="mt-[70px] flex flex-row justify-between space-x-5 px-10 w-full"
+      >
+        <div class="flex flex-row space-x-[20px]">
+          <div class="text-blue-600 text-2xl">
+            <i class="fa-solid fa-truck"></i>
+          </div>
+          <div class="flex flex-col">
+            <h1 class="font-extrabold text-xl tracking-wider">Free Shipping</h1>
+            <p class="text-gray-600 w-[220px] tracking-wide mt-[15px]">
+              Enjoy free shipping on all orders above $100
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-row space-x-[20px]">
+          <div class="text-blue-600 text-2xl">
+            <i class="fa-solid fa-arrows-spin"></i>
+          </div>
+          <div class="flex flex-col">
+            <h1 class="font-extrabold text-xl tracking-wider">SUPPORT 24/7</h1>
+            <p class="text-gray-600 w-[220px] tracking-wide mt-[15px]">
+              Our support team is there to help you for queries
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-row space-x-[20px]">
+          <div class="text-blue-600 text-2xl">
+            <i class="fa-solid fa-arrow-rotate-left"></i>
+          </div>
+          <div class="flex flex-col">
+            <h1 class="font-extrabold text-xl tracking-wider">
+              30 DAYS RETURN
+            </h1>
+            <p class="text-gray-600 w-[220px] tracking-wide mt-[15px]">
+              Simply return it within 30 days for an exchange.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-row space-x-[20px]">
+          <div class="text-blue-600 text-2xl">
+            <i class="fa-solid fa-fingerprint"></i>
+          </div>
+          <div class="flex flex-col">
+            <h1 class="font-extrabold text-xl tracking-wider">
+              100% PAYMENT SECURE
+            </h1>
+            <p class="text-gray-600 w-[220px] tracking-wide mt-[15px]">
+              Simply return it within 30 days for an exchange.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="h-[80vh] w-full flex flex-row mt-[100px] justify-between px-10"
+      >
+        <div
+          class="bg-black w-[700px] h-[350px] text-white flex flex-row justify-center"
+        >
+          <div class="flex flex-col mt-[80px] items-center">
+            <h1 class="text-2xl flex flex-row justify-center items-center">
+              PEACE OF MIND
+            </h1>
+            <p class="mt-5 break-words w-[350px]">
+              A one-stop platform for all your fashion needs,
+              <span class="flex flex-row justify-center items-center">
+                hassle-free. Buy with a peace of mind.</span
+              >
+            </p>
+            <button
+              class="flex flex-row justify-center items-center mt-5 bg-white w-[120px] h-[45px] text-blue-600 text-sm"
+            >
+              BUY NOW
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="bg-black w-[600px] h-[350px] text-white flex flex-row justify-center"
+        >
+          <div class="flex flex-col mt-[80px] items-center">
+            <h1 class="text-2xl flex flex-row justify-center items-center">
+              BUY 2 GET 1 FREE
+            </h1>
+            <p class="mt-5 break-words w-[350px]">
+              End of season sale. Buy any 2 items of your
+              <span class="flex flex-row justify-center items-center">
+                choice and get 1 free.</span
+              >
+            </p>
+            <button
+              class="flex flex-row justify-center items-center mt-5 bg-white w-[120px] h-[45px] text-blue-600 text-sm"
+            >
+              BUY NOW
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 </template>
 
 <script>
 import ProductCard from "../components/ProductCard.vue";
+
 export default {
   name: "Test",
   components: {
