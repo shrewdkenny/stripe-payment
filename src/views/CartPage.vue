@@ -2,7 +2,7 @@
   <div class="flex flex-col">
     <div class="flex flex-row border-b-2 w-auto mt-[100px]">
       <h1 class="ml-[250px] w-[100px] text-2xl font-black">Products</h1>
-      <div class="flex flex-row gap-[80px] ml-[370px]">
+      <div class="flex flex-row gap-[120px] ml-[370px]">
         <p class="text-2xl font-black">Price</p>
         <p class="text-2xl font-black">Quantity</p>
       </div>
@@ -20,10 +20,8 @@
         />
         <p class="w-[500px]">{{ item.labelText }}</p>
       </div>
-      <div
-        class="flex flex-row gap-[70px] mr-[100px] justify-center items-center"
-      >
-        <p>{{ item.price }}</p>
+      <div class="flex flex-row gap-[90px] justify-center items-center">
+        <p class="font-black">{{ item.price }}</p>
         <div class="flex flex-row justify-center items-center space-x-4">
           <button class="text-5xl">-</button>
 
