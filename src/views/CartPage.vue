@@ -1,29 +1,27 @@
 <template>
   <div class="flex flex-col">
-    <div
-      class="flex flex-row border-b-2 w-auto gap-[70px] mt-[100px] "
-    >
-      <h1 class="ml-[320px] w-[100px] text-2xl font-black">Products</h1>
-      <div class="flex flex-row gap-[200px] ml-[480px]">
+    <div class="flex flex-row border-b-2 w-auto mt-[100px]">
+      <h1 class="ml-[250px] w-[100px] text-2xl font-black">Products</h1>
+      <div class="flex flex-row gap-[200px] ml-[250px]">
         <p class="text-2xl font-black">Price</p>
         <p class="text-2xl font-black">Quantity</p>
       </div>
     </div>
 
     <div
-      class="flex flex-row gap-[70px] mt-[50px] mx-[5px] h-[10vh]"
+      class="flex flex-row gap-[20px] mt-[50px] mx-[5px] h-[10vh]"
       v-for="item in cartItems"
     >
-      <div class="flex flex-row gap-5 ml-[300px]">
+      <div class="flex flex-row gap-5 ml-[150px]">
         <img
           :src="item.pictures"
           alt="Product Image"
-          class="h-[50px] w-[50px] ml-10"
+          class="h-[50px] w-[50px]"
         />
         <p class="w-[500px]">{{ item.labelText }}</p>
       </div>
-      <div class="flex flex-row gap-[200px] mr-[250px]">
-        <p class="ml-10">{{ item.price }}</p>
+      <div class="flex flex-row gap-[40px]">
+        <p>{{ item.price }}</p>
         <button class="w-[40px] h-[40px] border-2 ml-10"></button>
       </div>
     </div>
