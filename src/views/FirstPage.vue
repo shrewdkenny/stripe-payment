@@ -135,14 +135,12 @@
 
 <script>
 import ProductCard from "../components/ProductCard.vue";
-
 import { useCart } from "@/stores/CartStore";
 
 export default {
   name: "Test",
   components: {
     ProductCard,
-   
   },
   created() {},
   data() {
