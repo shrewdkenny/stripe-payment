@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-
+import NavbarLayout from "./Layouts/Navbar.vue";
 </script>
 <template>
   <header>
@@ -8,6 +8,6 @@ import { RouterLink, RouterView } from "vue-router";
       <RouterLink to="/"></RouterLink>
     </div>
   </header>
-
+  <NavbarLayout />
   <RouterView />
 </template>
