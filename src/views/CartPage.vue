@@ -1,5 +1,36 @@
 <template>
-  <div class="mt-[100px] flex flex-wrap">
+  <div class="flex flex-col">
+    <div
+      class="flex flex-row border-b-2 w-auto gap-[70px] mt-[100px] mx-[20px]"
+    >
+      <h1 class="ml-[350px]">Product</h1>
+      <div class="flex flex-row gap-[200px] ml-[212px]">
+        <p>Price</p>
+        <p>Quantity</p>
+        <p>Total</p>
+      </div>
+    </div>
+    <div
+      class="flex flex-row border-b-2 gap-[70px] mt-[50px] mx-[20px] h-[10vh] w-full"
+      v-for="item in cartItems"
+    >
+      <div class="flex flex-row gap-5  ml-[300px]">
+        <img
+          :src="item.pictures"
+          alt="Product Image"
+          class="h-[50px] w-[50px] "
+        />
+        <p>{{ item.labelText }}</p>
+      </div>
+      <div class="flex flex-row gap-[200px] ml-[150px]">
+        <p>{{ item.price }}</p>
+        <button class></button>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="mt-[100px] flex flex-wrap">
     <div
       v-for="item in cartItems"
       class="flex flex-col justify-center items-center w-[10vw]"
@@ -28,7 +59,7 @@
     >
       Pay
     </button>
-  </div>
+  </div> -->
 </template>
 
 <script>
