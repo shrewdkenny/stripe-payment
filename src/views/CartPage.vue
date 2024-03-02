@@ -2,7 +2,7 @@
   <div class="flex flex-col">
     <div class="flex flex-row border-b-2 w-auto mt-[100px]">
       <h1 class="ml-[250px] w-[100px] text-2xl font-black">Products</h1>
-      <div class="flex flex-row gap-[200px] ml-[250px]">
+      <div class="flex flex-row gap-[80px] ml-[370px]">
         <p class="text-2xl font-black">Price</p>
         <p class="text-2xl font-black">Quantity</p>
       </div>
@@ -12,7 +12,7 @@
       class="flex flex-row gap-[20px] mt-[50px] mx-[5px] h-[10vh]"
       v-for="item in cartItems"
     >
-      <div class="flex flex-row gap-5 ml-[150px]">
+      <div class="flex flex-row gap-5 ml-[150px] justify-center items-center">
         <img
           :src="item.pictures"
           alt="Product Image"
@@ -20,9 +20,16 @@
         />
         <p class="w-[500px]">{{ item.labelText }}</p>
       </div>
-      <div class="flex flex-row gap-[40px]">
+      <div
+        class="flex flex-row gap-[70px] mr-[100px] justify-center items-center"
+      >
         <p>{{ item.price }}</p>
-        <button class="w-[40px] h-[40px] border-2 ml-10"></button>
+        <div class="flex flex-row justify-center items-center space-x-4">
+          <button class="text-5xl">-</button>
+
+          <button class="w-[40px] h-[40px] border-2"></button>
+          <button class="text-5xl">+</button>
+        </div>
       </div>
     </div>
     <div class="flex flex-row justify-center items-center mb-10">
