@@ -156,7 +156,7 @@
 
 <script>
 import ProductCard from "../components/ProductCard.vue";
-import IncreaseCount from "@/components/IncreaseCount.vue";
+
 import { useCart } from "@/stores/CartStore";
 
 export default {
@@ -170,7 +170,6 @@ export default {
   name: "Test",
   components: {
     ProductCard,
-    IncreaseCount,
   },
   created() {},
   data() {
