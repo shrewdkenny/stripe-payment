@@ -9,7 +9,14 @@
       </ul>
       <div class="flex flex-row space-x-4 font-normal font-mono text-xl">
         <i class="fa-regular fa-user"></i>
-        <IncreaseCount />
+        <div class="relative">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <h1
+            class="absolute top-[-19px] left-2 text-orange-500 text-sm font-serif"
+          >
+            {{ increaseCount.count }}
+          </h1>
+        </div>
 
         <i class="fa-solid fa-bars"></i>
       </div>
@@ -153,6 +160,13 @@ import IncreaseCount from "@/components/IncreaseCount.vue";
 import { useCart } from "@/stores/CartStore";
 
 export default {
+  setup() {
+    const increaseCount = useCart();
+
+    return {
+      increaseCount,
+    };
+  },
   name: "Test",
   components: {
     ProductCard,
@@ -219,7 +233,7 @@ export default {
       const cartStore = useCart();
       cartStore.addToCart(product);
       this.$router.push("/cart");
-    }
+    },
   },
 };
 </script>
