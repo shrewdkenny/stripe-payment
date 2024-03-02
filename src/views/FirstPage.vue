@@ -37,45 +37,11 @@
         class="mt-[100px] flex flex-wrap justify-between space-x-5 px-10 w-full"
       >
         <ProductCard
-        @click="pay"
-          labelText="Plain white shirt"
-          price="$29.00"
-          pictures="./src/assets/images/one.png"
-        />
-        <ProductCard
-          labelText="Denim jacket"
-          price="$69.00"
-          pictures="./src/assets/images/thirteen.png"
-        />
-        <ProductCard
-          labelText="Black polo shirt"
-          price="$49.00"
-          pictures="./src/assets/images/three.png"
-        />
-        <ProductCard
-          labelText="Blue Sweatshirt"
-          price="$79.00"
-          pictures="./src/assets/images/four.png"
-        />
-        <ProductCard
-          labelText="Blue Plain Shirt"
-          price="$49.00"
-          pictures="./src/assets/images/two.png"
-        />
-        <ProductCard
-          labelText="Dark Blue Shirt"
-          price="$89.00"
-          pictures="./src/assets/images/five.png"
-        />
-        <ProductCard
-          labelText="Outcast T Shirt"
-          price="$19.00"
-          pictures="./src/assets/images/seven.png"
-        />
-        <ProductCard
-          labelText="Polo Plain Shirt"
-          price="$29.00"
-          pictures="./src/assets/images/eight.png"
+          v-for="product in products"
+          :labelText="product.labelText"
+          :price="product.price"
+          :pictures="product.pictures"
+          @addingToCart="handleAddToCart(product)"
         />
       </div>
       <div
@@ -182,6 +148,7 @@
 
 <script>
 import ProductCard from "../components/ProductCard.vue";
+import { useCart } from "@/stores/CartStore";
 
 export default {
   name: "Test",
@@ -190,12 +157,65 @@ export default {
   },
   created() {},
   data() {
-    return {};
+    return {
+      products: [
+        {
+          labelText: "Plain white shirt",
+          price: "$29.00",
+          pictures: "./src/assets/images/one.png",
+          button: "Add To Cart",
+        },
+        {
+          labelText: "Denim jacket",
+          price: "$69.00",
+          pictures: "./src/assets/images/thirteen.png",
+          button: "Add To Cart",
+        },
+        {
+          labelText: "Black polo shirt",
+          price: "$49.00",
+          pictures: "./src/assets/images/three.png",
+          button: "Add To Cart",
+        },
+        {
+          labelText: "Blue Sweatshirt",
+          price: "$79.00",
+          pictures: "./src/assets/images/four.png",
+          button: "Add To Cart",
+        },
+        {
+          labelText: "Blue Plain Shirt",
+          price: "$89.00",
+          pictures: "./src/assets/images/two.png",
+          button: "Add To Cart",
+        },
+        {
+          labelText: "Dark Blue Shirt",
+          price: "$79.00",
+          pictures: "./src/assets/images/five.png",
+          button: "Add To Cart",
+        },
+        {
+          labelText: "Outcast T Shirt",
+          price: "$19.00",
+          pictures: "./src/assets/images/seven.png",
+          button: "Add To Cart",
+        },
+        {
+          labelText: "Polo Plain Shirt",
+          price: "$29.00",
+          pictures: "./src/assets/images/eight.png",
+          button: "Add To Cart",
+        },
+      ],
+    };
   },
   props: {},
   methods: {
-    pay() {
-      window.location.href = "https://buy.stripe.com/test_cN217G8Xhd9vfhCaEE";
+    handleAddToCart(product) {
+      const cartStore = useCart();
+      cartStore.addToCart(product);
+      this.$router.push("/cart");
     },
   },
 };

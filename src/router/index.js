@@ -3,6 +3,8 @@ import FirstPage from "../views/FirstPage.vue";
 import SuccessPage from "../views/SuccessPage.vue";
 import CancelPage from "../views/CancelPage.vue";
 import StripePage from "../views/StripePage.vue";
+import CartPage from "../views/CartPage.vue"
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +29,12 @@ const router = createRouter({
       name: "Stripe",
       component: StripePage,
     },
+    {
+      path: "/cart",
+      name: "Cart",
+      component: CartPage,
+    }
+  
   ],
 });
 

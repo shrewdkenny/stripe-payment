@@ -37,11 +37,11 @@ export default {
           quantity: 1,
         },
         {
-          price: "price_1OolQfAzNMyeQV4mAlNS5LEk",
+          price: "price_1OolQBAzNMyeQV4mYJN40u8P",
           quantity: 1,
         },
         {
-          price: "price_1OolQfAzNMyeQV4mAlNS5LEk",
+          price: "price_1OolOtAzNMyeQV4mj5Vfqwnf",
           quantity: 1,
         },
       ],
@@ -52,7 +52,6 @@ export default {
   methods: {
     submit() {
       this.$refs.checkoutRef.redirectToCheckout();
-      
     },
   },
 };
