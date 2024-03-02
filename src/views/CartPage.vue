@@ -24,7 +24,8 @@
       </div>
       <div class="flex flex-row gap-[200px] ml-[150px]">
         <p>{{ item.price }}</p>
-        <button class></button>
+        <button class="w-[40px] h-[40px] border-2"></button>
+        <p>{{ item.price }}</p>
         
       </div>
     </div>
