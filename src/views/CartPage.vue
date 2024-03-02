@@ -1,32 +1,30 @@
 <template>
   <div class="flex flex-col">
     <div
-      class="flex flex-row border-b-2 w-auto gap-[70px] mt-[100px] mx-[20px]"
+      class="flex flex-row border-b-2 w-auto gap-[70px] mt-[100px] "
     >
-      <h1 class="ml-[350px]">Product</h1>
-      <div class="flex flex-row gap-[200px] ml-[212px]">
-        <p>Price</p>
-        <p>Quantity</p>
-        <p>Total</p>
+      <h1 class="ml-[320px] w-[100px] text-2xl font-black">Products</h1>
+      <div class="flex flex-row gap-[200px] ml-[480px]">
+        <p class="text-2xl font-black">Price</p>
+        <p class="text-2xl font-black">Quantity</p>
       </div>
     </div>
 
     <div
-      class="flex flex-row gap-[70px] mt-[50px] mx-[20px] h-[10vh] w-full"
+      class="flex flex-row gap-[70px] mt-[50px] mx-[5px] h-[10vh]"
       v-for="item in cartItems"
     >
       <div class="flex flex-row gap-5 ml-[300px]">
         <img
           :src="item.pictures"
           alt="Product Image"
-          class="h-[50px] w-[50px]"
+          class="h-[50px] w-[50px] ml-10"
         />
-        <p>{{ item.labelText }}</p>
+        <p class="w-[500px]">{{ item.labelText }}</p>
       </div>
-      <div class="flex flex-row gap-[200px] ml-[150px]">
-        <p>{{ item.price }}</p>
-        <button class="w-[40px] h-[40px] border-2"></button>
-        <p>{{ item.price }}</p>
+      <div class="flex flex-row gap-[200px] mr-[250px]">
+        <p class="ml-10">{{ item.price }}</p>
+        <button class="w-[40px] h-[40px] border-2 ml-10"></button>
       </div>
     </div>
     <div class="flex flex-row justify-center items-center mb-10">
@@ -38,37 +36,6 @@
       </button>
     </div>
   </div>
-
-  <!-- <div class="mt-[100px] flex flex-wrap">
-    <div
-      v-for="item in cartItems"
-      class="flex flex-col justify-center items-center w-[10vw]"
-    >
-      <img
-        :src="item.pictures"
-        alt="Product Image"
-        class="w-[300px] h-[300px]"
-      />
-      <div class="flex justify-center items-center text-sm font-bold mt-3">
-        {{ item.labelText }}
-      </div>
-      <div>
-        <div
-          class="flex justify-center items-center text-sm text-blue-600 mb-6"
-        >
-          {{ item.price }}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="flex flex-row justify-center items-center">
-    <button
-      @click="pay()"
-      class="bg-black text-white rounded-lg text-sm p-[10px] mt-[30px] w-[100px]"
-    >
-      Pay
-    </button>
-  </div> -->
 </template>
 
 <script>
