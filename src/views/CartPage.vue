@@ -10,15 +10,16 @@
         <p>Total</p>
       </div>
     </div>
+
     <div
-      class="flex flex-row border-b-2 gap-[70px] mt-[50px] mx-[20px] h-[10vh] w-full"
+      class="flex flex-row gap-[70px] mt-[50px] mx-[20px] h-[10vh] w-full"
       v-for="item in cartItems"
     >
-      <div class="flex flex-row gap-5  ml-[300px]">
+      <div class="flex flex-row gap-5 ml-[300px]">
         <img
           :src="item.pictures"
           alt="Product Image"
-          class="h-[50px] w-[50px] "
+          class="h-[50px] w-[50px]"
         />
         <p>{{ item.labelText }}</p>
       </div>
@@ -26,8 +27,15 @@
         <p>{{ item.price }}</p>
         <button class="w-[40px] h-[40px] border-2"></button>
         <p>{{ item.price }}</p>
-        
       </div>
+    </div>
+    <div class="flex flex-row justify-center items-center mb-10">
+      <button
+        @click="pay()"
+        class="bg-black text-white rounded-lg text-sm p-[10px] mt-[30px] w-[100px]"
+      >
+        Pay
+      </button>
     </div>
   </div>
 
