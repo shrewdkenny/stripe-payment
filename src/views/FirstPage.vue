@@ -9,7 +9,8 @@
       </ul>
       <div class="flex flex-row space-x-4 font-normal font-mono text-xl">
         <i class="fa-regular fa-user"></i>
-        <i class="fa-solid fa-cart-shopping"></i>
+        <IncreaseCount />
+
         <i class="fa-solid fa-bars"></i>
       </div>
     </nav>
@@ -148,12 +149,14 @@
 
 <script>
 import ProductCard from "../components/ProductCard.vue";
+import IncreaseCount from "@/components/IncreaseCount.vue";
 import { useCart } from "@/stores/CartStore";
 
 export default {
   name: "Test",
   components: {
     ProductCard,
+    IncreaseCount,
   },
   created() {},
   data() {
@@ -216,7 +219,7 @@ export default {
       const cartStore = useCart();
       cartStore.addToCart(product);
       this.$router.push("/cart");
-    },
+    }
   },
 };
 </script>
