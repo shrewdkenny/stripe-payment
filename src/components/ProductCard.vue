@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-between">
+  <div class="flex flex-col justify-between items-center">
     <img :src="pictures" alt="" />
     <h1 class="flex justify-center items-center text-sm font-bold mt-3">
       {{ labelText }}

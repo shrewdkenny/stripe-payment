@@ -8,9 +8,8 @@
       <li>ABOUT</li>
       <li>CONTACT US</li>
     </ul>
-    <div class="flex flex-row space-x-4 font-normal font-mono text-xl">
+    <div class="flex flex-row gap-5 font-normal font-mono text-xl">
       <i class="fa-regular fa-user"></i>
-
       <div class="relative">
         <router-link to="/cart">
           <i class="fa-solid fa-cart-shopping"></i>
@@ -21,8 +20,6 @@
           </h1>
         </router-link>
       </div>
-
-      <i class="fa-solid fa-bars"></i>
     </div>
   </nav>
 </template>
