@@ -32,7 +32,7 @@
         />
       </div>
       <div
-        class="mt-[70px] flex flex-row justify-between space-x-5 px-10 w-full"
+        class="mt-[90px] flex flex-row justify-between space-x-5 px-10 w-full"
       >
         <div class="flex flex-row space-x-[20px]">
           <div class="text-blue-600 text-2xl">

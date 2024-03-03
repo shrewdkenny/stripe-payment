@@ -1,37 +1,20 @@
 <template>
-  <div class="flex flex-col">
-    <div class="flex flex-row border-b-2 w-auto mt-[100px]">
-      <h1 class="ml-[250px] w-[100px] text-2xl font-black">Products</h1>
-      <div class="flex flex-row gap-[120px] ml-[370px]">
-        <p class="text-2xl font-black">Price</p>
-        <p class="text-2xl font-black">Quantity</p>
-      </div>
+  <div class="h-screen w-full flex flex-col">
+    <div class="flex flex-row gap-[300px] border-b-2 w-auto mt-[100px]">
+      <h1 class="ml-[150px] w-[100px] text-2xl font-black">Products</h1>
+      <p class="text-2xl font-black ml-[190px]">Price</p>
     </div>
 
-    <div
-      class="flex flex-row gap-[20px] mt-[50px] mx-[5px] h-[10vh]"
-      v-for="item in cartItems"
-    >
-      <div class="flex flex-row gap-5 ml-[150px] justify-center items-center">
+    <div class="flex flex-row mt-[50px] h-[10vh]" v-for="item in cartItems">
+      <div class="ml-[150px] w-[600px] text-2xl flex flex-row space-x-10">
         <img
           :src="item.pictures"
           alt="Product Image"
           class="h-[50px] w-[50px]"
         />
-        <p class="w-[500px]">{{ item.labelText }}</p>
+        <p class="text-lg font-black">{{ item.labelText }}</p>
       </div>
-      <div class="flex flex-row gap-[90px] justify-center items-center">
-        <p class="font-black">{{ item.price }}</p>
-        <div class="flex flex-row justify-center items-center space-x-4">
-          <button class="text-5xl">-</button>
-          <div class="relative">
-            <div class="w-[40px] h-[40px] border-2"></div>
-            <h1 class="absolute top-2 right-4">{{ productQuantity }}</h1>
-          </div>
-
-          <button class="text-5xl">+</button>
-        </div>
-      </div>
+      <p class="flex flex-row justify-center font-black">{{ item.price }}</p>
     </div>
     <div class="flex flex-row justify-center items-center mb-10">
       <button
@@ -61,6 +44,9 @@ export default {
   methods: {
     pay() {
       window.location.href = "https://buy.stripe.com/test_00g7w41uP6L7fhCbIK";
+    },
+    increaseQuantity() {
+      this.productQuantity++;
     },
   },
 };
