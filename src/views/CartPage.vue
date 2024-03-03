@@ -24,8 +24,11 @@
         <p class="font-black">{{ item.price }}</p>
         <div class="flex flex-row justify-center items-center space-x-4">
           <button class="text-5xl">-</button>
+          <div class="relative">
+            <div class="w-[40px] h-[40px] border-2"></div>
+            <h1 class="absolute top-2 right-4">{{ productQuantity }}</h1>
+          </div>
 
-          <button class="w-[40px] h-[40px] border-2"></button>
           <button class="text-5xl">+</button>
         </div>
       </div>
@@ -47,8 +50,12 @@ export default {
   setup() {
     const cartStore = useCart();
     const cartItems = cartStore.items;
+    const productQuantity = cartStore.quantity;
+
     return {
       cartItems,
+      cartStore,
+      productQuantity,
     };
   },
   methods: {
