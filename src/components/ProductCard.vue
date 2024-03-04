@@ -9,7 +9,7 @@
     </h2>
     <button
       @click="showProduct"
-      class="m-5 bg-red-800 flex h-[50px] w-[200px] rounded-lg justify-center text-center items-center text-sm text-white"
+      class="m-5 bg-orange-800 flex h-[50px] w-[200px] rounded-lg justify-center text-center items-center text-sm text-white"
     >
       Add To Cart
     </button>
