@@ -25,9 +25,8 @@
       >
         <ProductCard
           v-for="product in products"
-          :labelText="product.labelText"
-          :price="product.price"
-          :pictures="product.pictures"
+          :key="product.id"
+          :product="product"
           @addingToCart="handleAddToCart(product)"
         />
       </div>
@@ -147,51 +146,59 @@ export default {
     return {
       products: [
         {
+          id: 1,
           labelText: "Plain white shirt",
           price: "$29.00",
-          pictures: "./src/assets/images/one.png",
+          pictures: ["./src/assets/images/one.png"],
           button: "Add To Cart",
         },
         {
+          id: 2,
           labelText: "Denim jacket",
           price: "$69.00",
-          pictures: "./src/assets/images/thirteen.png",
+          pictures: ["./src/assets/images/thirteen.png"],
           button: "Add To Cart",
         },
         {
+          id: 3,
           labelText: "Black polo shirt",
           price: "$49.00",
-          pictures: "./src/assets/images/three.png",
+          pictures: ["./src/assets/images/three.png"],
           button: "Add To Cart",
         },
         {
+          id: 4,
           labelText: "Blue Sweatshirt",
           price: "$79.00",
-          pictures: "./src/assets/images/four.png",
+          pictures: ["./src/assets/images/four.png"],
           button: "Add To Cart",
         },
         {
+          id: 5,
           labelText: "Blue Plain Shirt",
           price: "$89.00",
-          pictures: "./src/assets/images/two.png",
+          pictures: ["./src/assets/images/two.png"],
           button: "Add To Cart",
         },
         {
+          id: 6,
           labelText: "Dark Blue Shirt",
           price: "$79.00",
-          pictures: "./src/assets/images/five.png",
+          pictures: ["./src/assets/images/five.png"],
           button: "Add To Cart",
         },
         {
+          id: 7,
           labelText: "Outcast T Shirt",
           price: "$19.00",
-          pictures: "./src/assets/images/seven.png",
+          pictures: ["./src/assets/images/seven.png"],
           button: "Add To Cart",
         },
         {
+          id: 8,
           labelText: "Polo Plain Shirt",
           price: "$29.00",
-          pictures: "./src/assets/images/eight.png",
+          pictures: ["./src/assets/images/eight.png"],
           button: "Add To Cart",
         },
       ],

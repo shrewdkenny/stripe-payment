@@ -1,11 +1,11 @@
 <template>
   <div class="flex flex-col justify-between items-center">
-    <img :src="pictures" alt="" />
+    <img :src="product.pictures[0]" alt="" />
     <h1 class="flex justify-center items-center text-sm font-bold mt-3">
-      {{ labelText }}
+      {{ product.labelText }}
     </h1>
     <h2 class="flex justify-center items-center text-sm text-blue-600 mt-1">
-      {{ price }}
+      {{ product.price }}
     </h2>
     <button
       @click="showProduct"
@@ -24,17 +24,14 @@ export default {
     return {};
   },
   props: {
-    labelText: String,
-    price: String,
-    pictures: String,
+    product: {
+      type: Object,
+      required: true,
+    },
   },
   methods: {
     showProduct() {
-      this.$emit("addingToCart", {
-        labelText: this.labelText,
-        price: this.price,
-        pictures: this.pictures,
-      });
+      this.$emit("addingToCart", this.product);
     },
   },
 };

@@ -34,7 +34,6 @@ export default {
     const cartStore = useCart();
     const cartItems = cartStore.items;
     const productQuantity = cartStore.quantity;
-
     return {
       cartItems,
       cartStore,

@@ -31,20 +31,7 @@ export default {
     this.publishableKey =
       "pk_test_51OmdFlAzNMyeQV4mfOn6WDPrd4EabtTyKtCaQiNM5L57Sy9nBj5FTxd9h3d372s5uyrw3lN2JOJhIQnPOnLszcc800iBZnL2CC";
     return {
-      lineItems: [
-        {
-          price: "price_1OolQfAzNMyeQV4mAlNS5LEk",
-          quantity: 1,
-        },
-        {
-          price: "price_1OolQBAzNMyeQV4mYJN40u8P",
-          quantity: 1,
-        },
-        {
-          price: "price_1OolOtAzNMyeQV4mj5Vfqwnf",
-          quantity: 1,
-        },
-      ],
+      lineItems: [],
       successURL: "http://localhost:5173/success",
       cancelURL: "http://localhost:5173/cancel",
     };
